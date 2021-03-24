@@ -721,7 +721,7 @@ class HTTP20Connection(object):
 
                     raise ConnectionError(error_string)
             else:
-                log.info("Received unhandled event %s", event)
+                log.debug("Received unhandled event %s", event)
 
         self._send_outstanding_data(tolerate_peer_gone=True, send_empty=False)
 
